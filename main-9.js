@@ -69,23 +69,54 @@ console.log("Замакания")
 
 //Example 4
 
-let arr = [1,2,3,4,5,6,7,];
+// let arr = [1,2,3,4,5,6,7,];
+//
+// const inBetween = (start, end) => {
+//     return (el) => {
+//         return el >= start && el <= end
+//     }
+// }
+//
+// const inArray = (arr) => {
+//     return (el) => {
+//         return arr.includes(el)
+//     }
+// }
+//
+// console.log(arr.filter(inBetween(3,6)) );  // 3,4,5,6
+//
+// console.log(arr.filter(inArray([2, 5])) );
 
-const inBetween = (start, end) => {
-    return (el) => {
-        return el >= start && el <= end
+
+
+
+
+
+//Example 5 Рекурсия
+
+const pow = (x ,n) =>{
+
+    if(n === 1){
+        return x;
+    } else {
+        return x * pow(x, n - 1)
     }
 }
 
-const inArray = (arr) => {
-    return (el) => {
-        return arr.includes(el)
-    }
-}
+console.log(pow(3,3))
 
-console.log(arr.filter(inBetween(3,6)) );  // 3,4,5,6
 
-console.log(arr.filter(inArray([2, 5])) );
+
+
+
+
+
+
+
+
+
+
+
 
 
 
