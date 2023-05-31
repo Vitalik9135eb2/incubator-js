@@ -81,10 +81,39 @@ setTimeout( car3.showColor.bind(car3), 1000)
 
 
 
+const car4 ={ color:"pink"}
+function foo(){
+    console.log("Car 4 " + this.color)
+}
+
+const bindFoo = foo.bind(car4)
+bindFoo()
 
 
 
 
+
+const car5 ={
+    color: "yellow",
+    showColor(){
+        console.log("Car 5 " + this.color)
+    }
+}
+
+
+function CarConstructor(color){
+    // return {}
+    this.color = color;
+    this.showColor = function (){
+        console.log( "Car 6 " + this.color)
+    }
+}
+
+// const Car6 = CarConstructor.bind(car5)
+const Car6 = CarConstructor
+const newCar = new Car6("black")
+
+newCar.showColor()
 
 
 
